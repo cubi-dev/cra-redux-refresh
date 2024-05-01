@@ -9,3 +9,4 @@ _____________________REDUX___________________________________________
     . việc state truyền hoặc props truyền (Có thể tìm kiếm Props Drilling để hiểu rõ hơn)
     . ContextHell
 - Redux hoạt động như thế nào? 
+  + Store -> Subcribe -> Dispath -> Reducer -> Tới đây nó lại quay về với Store để update state bên trong đó và tiếp tục lặp lại 
