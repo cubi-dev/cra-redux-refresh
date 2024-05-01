@@ -1,4 +1,5 @@
 _____________________REDUX___________________________________________
+- Lưu ý: Nên có kiến thức về useReducer cho chắc 
 - Cài đặt: npx create-react-app my-app --template redux 
 - Redux là gì? 
   + Hiểu đơn giản nó là thư viện quản lý state 
