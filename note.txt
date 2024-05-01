@@ -1,0 +1,10 @@
+_____________________REDUX___________________________________________
+- Cài đặt: npx create-react-app my-app --template redux 
+- Redux là gì? 
+  + Hiểu đơn giản nó là thư viện quản lý state 
+- Tại sao phải dùng Redux?
+  + Vì nó dễ quản lý state (hoặc có thể nói là nó có quy tắc chung cho làm việc nhóm kiểu z thì tiện hơn)
+  + Vì nó giúp mình có thể handle được: 
+    . việc state truyền hoặc props truyền (Có thể tìm kiếm Props Drilling để hiểu rõ hơn)
+    . ContextHell
+- Redux hoạt động như thế nào? 
