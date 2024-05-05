@@ -10,3 +10,9 @@ _____________________REDUX___________________________________________
     . ContextHell
 - Redux hoạt động như thế nào? 
   + Store -> Subcribe -> Dispath -> Reducer -> Tới đây nó lại quay về với Store để update state bên trong đó và tiếp tục lặp lại 
+
+_____________________REDUX MIDDLEWARE___________________________________________
+- Redux Middleware đúng như tên gọi của nó thì sẽ có middleware nằm ở giữa các process hoạt động của redux 
+- Cách hoạt động: 
+  Actions -> Dispatch(event handler) -> Middleware (khi này nó sẽ handle như gọi api,...) -> sau đó mới dispatch xong -> store -> reducer -> state và tiếp tục lặp 
+  
