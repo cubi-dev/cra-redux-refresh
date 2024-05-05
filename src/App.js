@@ -1,16 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
-import Counter from "./components/Counter";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import Card from "./components/uis/Card";
+import { toggleDarkMode } from "./redux-toolkit/globalSlice";
+import useDarkMode from "./hooks/useDarkMode";
 
 function App() {
-  const { count } = useSelector((state) => state.counter);
-  // console.log(count);
-  // const [count, setCount] = React.useState(0);
+  const globalOptions = useSelector((state) => state.global);
+  console.log(globalOptions);
+  const dispatch = useDispatch();
+  // const handleToggleDarkMode = () => {
+  //   dispatch(toggleDarkMode(true));
+  // };
+
+  const [darkMode, setDarkMode] = useDarkMode();
+  useEffect(() => {
+    dispatch(toggleDarkMode(darkMode));
+  }, []);
+  const handleToggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    dispatch(toggleDarkMode(darkMode));
+  };
+
   return (
     <div>
-      <h2>The count from App is: {count}</h2>
-      <Counter></Counter>
+      <Card></Card>
+      <button onClick={handleToggleDarkMode}>Toggle Dark Mode</button>
     </div>
   );
 }
